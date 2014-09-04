@@ -15,7 +15,8 @@ parallelExecution in Test := false
 libraryDependencies ++= Seq(
   "org.jblas" % "jblas" % "1.2.3",
   "com.github.fommil.netlib" % "all" % "1.1.2",
-  "org.scalanlp" % "breeze_2.10" % "0.9"
+  "org.scalanlp" % "breeze_2.10" % "0.9",
+  "org.apache.spark" % "spark-core_2.10" % "1.1.0"
 )
 
 {
@@ -27,7 +28,8 @@ defaultHadoopVersion)
 }
 
 resolvers ++= Seq(
- "Local Maven Repository" at Path.userHome.asFile.toURI.toURL + ".m2/repository",
+  "Local Maven Repository" at Path.userHome.asFile.toURI.toURL + ".m2/repository",
+  "Apache Staging" at "https://repository.apache.org/content/repositories/staging",
   "Typesafe" at "http://repo.typesafe.com/typesafe/releases",
   "Spray" at "http://repo.spray.cc"
 )
