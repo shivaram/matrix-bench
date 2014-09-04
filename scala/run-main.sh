@@ -49,7 +49,7 @@ else
 fi
 
 # Set MATRIX_MEM if it isn't already set since we also use it for this process
-MATRIX_MEM=${MATRIX_MEM:-512m}
+MATRIX_MEM=${MATRIX_MEM:-2048m}
 export MATRIX_MEM
 
 JAVA_OPTS="$JAVA_OPTS -Xms$MATRIX_MEM -Xmx$MATRIX_MEM "
