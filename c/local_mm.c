@@ -46,6 +46,10 @@ struct timeval diff(struct timeval start, struct timeval end) {
   return temp;
 }
 
+double timeval_to_ms(struct timeval t) {
+  return (((double) t.tv_sec)*1000000.0 + (double) t.tv_usec)/1000.0;
+}
+
 int main(int argc, char *argv[]) {
   if (argc < 4) {
     printf("Usage: %s <rowsA> <colsA/rowsB> <colsB>\n", argv[0]);
@@ -71,6 +75,6 @@ int main(int argc, char *argv[]) {
 
   struct timeval diff_t = diff(time1, time2);
 
-  printf("%lld.%.6d seconds\n", (long long)diff_t.tv_sec, diff_t.tv_usec);
+  printf("%2.6f ms\n", timeval_to_ms(diff_t));
   return 0;
 }
