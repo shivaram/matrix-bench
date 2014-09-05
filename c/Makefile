@@ -1,6 +1,6 @@
 .PHONY : clean all
 
-all: local_mm
+all: local_mm local_mv
 
 CC = gcc
 
@@ -17,6 +17,12 @@ local_mm : local_mm.o
 local_mm.o : local_mm.c
 	$(CC) $(CFLAGS) -o $@ -c $<
 
+local_mv : local_mv.o
+	$(CC) -o $@ $^ $(LD_FLAGS)
+
+local_mv.o : local_mv.c
+	$(CC) $(CFLAGS) -o $@ -c $<
+
 clean :
-	rm -f local_mm
+	rm -f local_mm local_mv
 	rm -f *.o
