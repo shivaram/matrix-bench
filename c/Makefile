@@ -4,12 +4,11 @@ all: local_mm local_mv
 
 CC = gcc
 
-BLAS_DIR = # Set this appropriately
-LAPACK_DIR = # Set this appropriately
+BLAS_DIR = /root/openblas-install/lib # Set this appropriately
 
 CFLAGS = -O2 -Wall -Wextra 
 
-LD_FLAGS = -lm -lblas -L$(BLAS_DIR) -Wl,-rpath $(BLAS_DIR) -llapack -L$(LAPACK_DIR) -Wl,-rpath $(LAPACK_DIR)
+LD_FLAGS = -lm -lblas -L$(BLAS_DIR) -Wl,-rpath $(BLAS_DIR)
 
 local_mm : local_mm.o
 	$(CC) -o $@ $^ $(LD_FLAGS)
