@@ -6,6 +6,6 @@ then
   exit 0
 fi
 
-./run-main.sh edu.cs.berkeley.amplab.SparkMMNetlib $1 $2 $3 $4 $5
+LD_LIBRARY_PATH=/root/openblas-install/lib ./run-main.sh edu.cs.berkeley.amplab.SparkMMNetlib $1 $2 $3 $4 $5
 
 wait
