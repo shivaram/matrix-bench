@@ -5,6 +5,7 @@ all: local_mm local_mv
 CC = gcc
 
 BLAS_DIR = /root/openblas-install/lib # Set this appropriately
+#BLAS_DIR = /usr/lib64
 
 CFLAGS = -O2 -Wall -Wextra 
 
