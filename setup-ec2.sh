@@ -32,4 +32,8 @@ pushd /root/jblas
   make
   mkdir -p /root/matrix-bench/scala/lib/ 
   cp src/main/resources/lib/static/Linux/amd64/sse3/libjblas.so /root/matrix-bench/scala/lib/
+
 popd
+
+# lapack
+yum install -y lapack-devel
