@@ -18,3 +18,7 @@ project/plugins/project/
 
 # C objects
 *.o
+
+# vim
+*~
+*.sw*
