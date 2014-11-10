@@ -31,5 +31,5 @@ local_qr.o : local_qr.c
 	$(CC) $(CFLAGS) -o $@ -c $<
 
 clean :
-	rm -f local_mm local_mv
+	rm -f local_mm local_mv local_qr
 	rm -f *.o
