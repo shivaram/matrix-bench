@@ -17,7 +17,8 @@ libraryDependencies ++= Seq(
   "com.github.fommil.netlib" % "all" % "1.1.2",
   "org.scalanlp" % "breeze_2.10" % "0.9",
   "org.apache.spark" % "spark-core_2.10" % "1.1.0",
-  "org.apache.spark" % "spark-mllib_2.10" % "1.1.0"
+  "org.apache.spark" % "spark-mllib_2.10" % "1.1.0",
+  "net.jafama" % "jafama" % "2.1.0"
 )
 
 {
