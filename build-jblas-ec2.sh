@@ -4,7 +4,7 @@ set -e
 
 # Build JBLAS for this machine
 rm -rf /root/jblas
-git clone https://github.com/mikiobraun/jblas.git
+git clone https://github.com/mikiobraun/jblas.git /root/jblas
 pushd /root/jblas
 
   git checkout jblas-1.2.3
